@@ -1,0 +1,31 @@
+
+
+export const ListCity = [
+    { nome: 'Acre', ibge: 12 },
+    { nome: 'Alagoas', ibge: 27 },
+    { nome: 'Amapá', ibge: 16 },
+    { nome: 'Amazonas', ibge: 13 },
+    { nome: 'Bahia', ibge: 29 },
+    { nome: 'Ceará', ibge: 23 },
+    { nome: 'Distrito Federal', ibge: 53 },
+    { nome: 'Espírito Santo', ibge: 32 },
+    { nome: 'Goiás', ibge: 52 },
+    { nome: 'Maranhão', ibge: 21 },
+    { nome: 'Mato Grosso', ibge: 51 },
+    { nome: 'Mato Grosso do Sul', ibge: 50 },
+    { nome: 'Minas Gerais', ibge: 31 },
+    { nome: 'Pará', ibge: 15 },
+    { nome: 'Paraíba', ibge: 25 },
+    { nome: 'Paraná', ibge: 41 },
+    { nome: 'Pernambuco', ibge: 26 },
+    { nome: 'Piauí', ibge: 22 },
+    { nome: 'Rio de Janeiro', ibge: 33 },
+    { nome: 'Rio Grande do Norte', ibge: 24 },
+    { nome: 'Rio Grande do Sul', ibge: 43 },
+    { nome: 'Rondônia', ibge: 11 },
+    { nome: 'Roraima', ibge: 14 },
+    { nome: 'Santa Catarina', ibge: 42 },
+    { nome: 'São Paulo', ibge: 35 },
+    { nome: 'Sergipe', ibge: 28 },
+    { nome: 'Tocantins', ibge: 17 }
+    ]
