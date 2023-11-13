@@ -37,6 +37,13 @@ hr{
     margin-bottom: 30px;
 }
 
+.TituloMun{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
 .EstMun{
     align-items: center;
     text-align: center;
