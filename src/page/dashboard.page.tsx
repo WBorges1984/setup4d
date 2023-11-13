@@ -8,7 +8,7 @@ export default function Dashboard() {
     return (
     <>
     <div>
-    <div className='titulo'>Consumo de JSON no ReactJS</div>
+    <div className='titulo'>Consumo de JSON no ReactJS - Willian Borges</div>
         <CardEstadoPage/>
     </div>
     <hr />
