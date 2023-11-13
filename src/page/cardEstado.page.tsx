@@ -4,12 +4,9 @@ import CardEstado from "../component/cardEstado";
 
 
 
-
-
-
 function CardEstadoPage(){
     const [estado, setEstado] = useState('Acre');
-    const [consultaCep, setConsultaCep] = useState([]);
+    const [consultaCep, setConsultaCep] = useState({codigo_ibge:'', estado:'',sigla:''});
 
     useEffect(() => {
         async function buscaDados() {
@@ -80,7 +77,7 @@ function CardEstadoPage(){
         <div className='cardEstado'>
           <CardEstado nome={consultaCep.codigo_ibge} estado={consultaCep.estado} sigla={consultaCep.sigla} />
         </div>
-    ) : (
+    ) : ( 
       <p>Carregando dados...</p>
     )}
         </div>
