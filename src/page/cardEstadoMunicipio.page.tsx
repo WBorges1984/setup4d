@@ -3,17 +3,19 @@ import { useEffect, useState } from "react";
 import { ListCitySigla } from "../component/listCitySigla";
 
 export default function CardEstadoMunicipioPage(){
-    const [estadoUF, setEstadoUf] = useState('RJ');
-    const [municipio, setMunicipio] = useState([{sigla:'',cidade:'',ibge:''}]);
+    const [estadoUF, setEstadoUf] = useState('12');
+    const [municipio, setMunicipio] = useState([{sigla:'',cidade:'',ibge:'', nome:''}]);
     const [endMunicipio, setEndMunicipio] = useState('');
 
     useEffect(() => {
       async function buscaDados() {
         try {
-          const resultado = await fetch(`https://api.setup4d.com.br/cep/ver.1.0.1/regiao/estado/${estadoUF}/cidade/`);
+         /*  const resultado = await fetch(`https://api.setup4d.com.br/cep/ver.1.0.1/regiao/estado/${estadoUF}/cidade/`); */
+          const resultado = await fetch(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${estadoUF}/municipios`);
           if (resultado.ok) {
             const resultadoFinal = await resultado.json();
             setMunicipio(resultadoFinal);
+        
           } else {
             console.error('Erro ao buscar os dados da API');
           }
@@ -21,7 +23,7 @@ export default function CardEstadoMunicipioPage(){
           console.error('Erro na requisição da API:', error);
         }
       }
-  
+      setEndMunicipio('12')
       buscaDados();
     }, [estadoUF]);
     return (
@@ -57,10 +59,11 @@ export default function CardEstadoMunicipioPage(){
                 value={endMunicipio}
               >
                 {municipio.map((item, index) => {
+                  
                   return (
-                    <option key={index} className='opSelect' value={item.cidade}>{item.cidade}</option>
-                  )
-                })}
+                    <option key={index} className='opSelect' value={item.ibge}>{item.nome}</option>
+                    )
+                  })}
               </NativeSelect>
         </FormControl>
         
